@@ -1,5 +1,6 @@
 ﻿using Labyrinth.Build;
 using Labyrinth.Crawl;
+using Labyrinth.Items;
 using Labyrinth.Tiles;
 using System.Text;
 
@@ -63,7 +64,28 @@ namespace Labyrinth
             return res.ToString();
         }
 
-        public ICrawler NewCrawler() => throw new NotImplementedException("To be implemented");
+        public ICrawler NewCrawler(){
+            ICrawler crawler = new Crawler(_tiles, _startPosition);
+            return crawler;
+        }
+        public class Crawler : ICrawler
+        {
+            public int X { get; set; }
+            public int Y { get; set; }
+            public Direction Direction { get; set; } = Direction.North;
+            public Tile FacingTile { get; set; }
+            public Inventory Walk()
+            {
+                throw new NotImplementedException();
+                return null;
+            }
+            public Crawler(Tile[,] tiles, (int, int) startPosition)
+            {
+                FacingTile = tiles.GetValue(startPosition.Item1, startPosition.Item2+1) as Tile;
+                X = startPosition.Item1;
+                Y = startPosition.Item2;
+            }
+        }
 
         private readonly Tile[,] _tiles;
         private (int, int) _startPosition;
