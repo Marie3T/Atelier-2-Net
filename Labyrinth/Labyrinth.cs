@@ -81,7 +81,7 @@ namespace Labyrinth
             }
             public Crawler(Tile[,] tiles, (int, int) startPosition)
             {
-                FacingTile = tiles.GetValue(startPosition.Item1, startPosition.Item2+1) as Tile;
+                FacingTile = tiles.GetValue(startPosition.Item1, startPosition.Item2-1) as Tile;
                 X = startPosition.Item1;
                 Y = startPosition.Item2;
             }
