@@ -62,7 +62,20 @@ public class LabyrinthCrawlerTest
     [Test]
     public void FacingNorthOnUpperTileReturnsOutside()
     {
-        Assert.That(false);
+         var laby = new Labyrinth.Labyrinth(new AsciiParser("""
+            +x-+
+            |  |
+            +--+
+            """));
+
+        var test = laby.NewCrawler();
+
+        using var all = Assert.EnterMultipleScope();
+
+        Assert.That(test.X, Is.EqualTo(1));
+        Assert.That(test.Y, Is.EqualTo(0));
+        Assert.That(test.Direction, Is.EqualTo(Direction.North));
+        Assert.That(test.FacingTile, Is.TypeOf<Outside>());
     }
 
     [Test]
