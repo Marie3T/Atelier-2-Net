@@ -1,0 +1,11 @@
+* [33m8f4a92a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m red FacingWestOnFarLeftTileReturnsOutside
+* [33m46ffee7[m green, refactor FacingNorthOnUpperTileReturnsOutside
+[31m|[m * [33m5220e0b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m green, refactor FacingNorthOnUpperTileReturnsOutside
+[31m|[m[31m/[m  
+* [33m2855f60[m red FacingNorthOnUpperTileReturnsOutside
+* [33mb880f5d[m red, refactor InitWithNoXThrowsArgumentException. L'exeption est déjà le vée par le contructeur de Labyrinth.
+* [33m5d28cb1[m red InitWithNoXThrowsArgumentException
+* [33m8f4743f[m red,green,refactor InitWithMultipleXUsesLastOne Fonctionnalité déjà implémenté dans AsciiParser.sc. La fonction AsciiParser retourn déja la position du dernier X croisé.
+* [33m4a71e89[m green InitWithCentesredX, refactor InitWithCentered
+* [33m483ce0c[m Red InitWithCenteredX
+* [33ma020001[m Code initial pour atelier 2

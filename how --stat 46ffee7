@@ -1,0 +1,33 @@
+[33mcommit 5220e0be305e703555010ffff7232ccd6a9e99d8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: marie <marie.tassel03@gmail.com>
+Date:   Thu Oct 29 22:15:27 2026 +0100
+
+    green, refactor FacingNorthOnUpperTileReturnsOutside
+
+ Labyrinth/Labyrinth.cs                             |  12 [32m++++++++++[m[31m--[m
+ Labyrinth/bin/Debug/net10.0/Labyrinth.dll          | Bin [31m13824[m -> [32m13824[m bytes
+ Labyrinth/bin/Debug/net10.0/Labyrinth.exe          | Bin [31m162304[m -> [32m162304[m bytes
+ Labyrinth/bin/Debug/net10.0/Labyrinth.pdb          | Bin [31m15560[m -> [32m15576[m bytes
+ .../obj/Debug/net10.0/Labyrinth.AssemblyInfo.cs    |   2 [32m+[m[31m-[m
+ .../net10.0/Labyrinth.AssemblyInfoInputs.cache     |   2 [32m+[m[31m-[m
+ Labyrinth/obj/Debug/net10.0/Labyrinth.dll          | Bin [31m13824[m -> [32m13824[m bytes
+ Labyrinth/obj/Debug/net10.0/Labyrinth.pdb          | Bin [31m15560[m -> [32m15576[m bytes
+ .../obj/Debug/net10.0/Labyrinth.sourcelink.json    |   2 [32m+[m[31m-[m
+ Labyrinth/obj/Debug/net10.0/apphost.exe            | Bin [31m162304[m -> [32m162304[m bytes
+ Labyrinth/obj/Debug/net10.0/ref/Labyrinth.dll      | Bin [31m8704[m -> [32m8704[m bytes
+ Labyrinth/obj/Debug/net10.0/refint/Labyrinth.dll   | Bin [31m8704[m -> [32m8704[m bytes
+ LabyrinthTest/bin/Debug/net10.0/Labyrinth.dll      | Bin [31m13824[m -> [32m13824[m bytes
+ LabyrinthTest/bin/Debug/net10.0/Labyrinth.exe      | Bin [31m162304[m -> [32m162304[m bytes
+ LabyrinthTest/bin/Debug/net10.0/Labyrinth.pdb      | Bin [31m15560[m -> [32m15576[m bytes
+ LabyrinthTest/bin/Debug/net10.0/LabyrinthTest.dll  | Bin [31m10240[m -> [32m10240[m bytes
+ LabyrinthTest/bin/Debug/net10.0/LabyrinthTest.pdb  | Bin [31m14328[m -> [32m14328[m bytes
+ .../bin/Debug/net10.0/nunit_random_seed.tmp        |   2 [32m+[m[31m-[m
+ .../Debug/net10.0/LabyrinthTest.AssemblyInfo.cs    |   2 [32m+[m[31m-[m
+ .../net10.0/LabyrinthTest.AssemblyInfoInputs.cache |   2 [32m+[m[31m-[m
+ .../LabyrinthTest.csproj.AssemblyReference.cache   | Bin [31m10982[m -> [32m10982[m bytes
+ LabyrinthTest/obj/Debug/net10.0/LabyrinthTest.dll  | Bin [31m10240[m -> [32m10240[m bytes
+ LabyrinthTest/obj/Debug/net10.0/LabyrinthTest.pdb  | Bin [31m14328[m -> [32m14328[m bytes
+ .../Debug/net10.0/LabyrinthTest.sourcelink.json    |   2 [32m+[m[31m-[m
+ .../obj/Debug/net10.0/ref/LabyrinthTest.dll        | Bin [31m7168[m -> [32m7168[m bytes
+ .../obj/Debug/net10.0/refint/LabyrinthTest.dll     | Bin [31m7168[m -> [32m7168[m bytes
+ 26 files changed, 17 insertions(+), 9 deletions(-)

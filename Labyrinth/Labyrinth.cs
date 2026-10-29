@@ -70,10 +70,30 @@ namespace Labyrinth
         }
         public class Crawler : ICrawler
         {
+            public Tile[,] tiles;
             public int X { get; set; }
             public int Y { get; set; }
             public Direction Direction { get; set; } = Direction.North;
-            public Tile FacingTile { get;}
+            public Tile FacingTile {
+                get
+                {
+                    if (Direction == Direction.North){
+                        if (Y - 1 < 0)
+                        {
+                            return Outside.Singleton;
+                        }
+
+                        return tiles[X, Y-1];
+                    }else if (Direction == Direction.West){
+                        if (X - 1 < 0 )
+                        {
+                            return Outside.Singleton;
+                        }
+                        return tiles[X-1, Y];
+                    }
+                    return tiles[X, Y];
+                }
+            }
             public Inventory Walk()
             {
                 throw new NotImplementedException();
@@ -81,14 +101,7 @@ namespace Labyrinth
             }
             public Crawler(Tile[,] tiles, (int, int) startPosition)
             {
-                if (startPosition.Item2 - 1 < 0)
-                {
-                    FacingTile = Outside.Singleton;
-                }
-                else
-                {
-                    FacingTile = tiles.GetValue(startPosition.Item1, startPosition.Item2-1) as Tile;
-                }
+                this.tiles = tiles;
                 X = startPosition.Item1;
                 Y = startPosition.Item2;
             }
