@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabyrinthTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f4743f72bc288b0c977bb525686125339972a4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d28cb1e4ff894f0d436eb1fa393595c3dbdd280")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabyrinthTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabyrinthTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
