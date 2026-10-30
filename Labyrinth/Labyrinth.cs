@@ -90,6 +90,12 @@ namespace Labyrinth
                             return Outside.Singleton;
                         }
                         return tiles[X-1, Y];
+                    }else if (Direction == Direction.East){
+                        if (X + 1 >= tiles.GetLength(0))
+                        {
+                            return Outside.Singleton;
+                        }
+                        return tiles[X+1, Y];
                     }
                     return tiles[X, Y];
                 }
