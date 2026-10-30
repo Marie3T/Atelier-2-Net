@@ -74,37 +74,18 @@ namespace Labyrinth
             public int X { get; set; }
             public int Y { get; set; }
             public Direction Direction { get; set; } = Direction.North;
-            public Tile FacingTile {
+            public Tile FacingTile
+            {
                 get
                 {
-                    if (Direction == Direction.North){
-                        if (Y - 1 < 0)
-                        {
-                            return Outside.Singleton;
-                        }
+                    int facingX = X + Direction.DeltaX;
+                    int facingY = Y + Direction.DeltaY;
 
-                        return tiles[X, Y-1];
-                    }else if (Direction == Direction.West){
-                        if (X - 1 < 0 )
-                        {
-                            return Outside.Singleton;
-                        }
-                        return tiles[X-1, Y];
-                    }else if (Direction == Direction.East){
-                        if (X + 1 >= tiles.GetLength(0))
-                        {
-                            return Outside.Singleton;
-                        }
-                        return tiles[X+1, Y];
+                    if (facingX < 0 || facingY < 0 || facingX >= tiles.GetLength(0) || facingY >= tiles.GetLength(1))
+                    {
+                        return Outside.Singleton;
                     }
-                    else if (Direction == Direction.South){
-                        if (Y + 1 >= tiles.GetLength(1))
-                        {
-                            return Outside.Singleton;
-                        }
-                        return tiles[X, Y+1];
-                    }
-                    return tiles[X, Y];
+                    return tiles[facingX, facingY];
                 }
             }
             public Inventory Walk()

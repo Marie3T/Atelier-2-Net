@@ -130,7 +130,7 @@ public class LabyrinthCrawlerTest
         var test = laby.NewCrawler();
         test.Direction.TurnRight();
         test.Direction.TurnRight();
-
+        
         using var all = Assert.EnterMultipleScope();
 
         Assert.That(test.X, Is.EqualTo(2));
