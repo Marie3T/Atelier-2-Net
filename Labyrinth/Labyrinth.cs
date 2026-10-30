@@ -97,6 +97,13 @@ namespace Labyrinth
                         }
                         return tiles[X+1, Y];
                     }
+                    else if (Direction == Direction.South){
+                        if (Y + 1 >= tiles.GetLength(1))
+                        {
+                            return Outside.Singleton;
+                        }
+                        return tiles[X, Y+1];
+                    }
                     return tiles[X, Y];
                 }
             }
